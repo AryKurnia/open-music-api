@@ -40,8 +40,6 @@ class AlbumsService {
     };
 
     const resultAlbum = await this._pool.query(queryAlbum);
-    // console.log(resultAlbum.rows);
-    // console.log(resultSongsInAlbum.rows);
 
     if (!resultAlbum.rows.length) {
       throw new NotFoundError('Album tidak ditemukan');
